@@ -1,0 +1,201 @@
+﻿时间:2019-03-11 09:57:33,868日志内容:f:\数据墙相关\项目源码\衡东数据墙\源码\DataWall\Views\Admin\Other\AdditionalData\AdditionalDataList.cshtml(102): error CS1002: 应输入 ;
+-----------------------------------------
+
+时间:2019-03-11 09:57:33,869日志内容:f:\数据墙相关\项目源码\衡东数据墙\源码\DataWall\Views\Admin\Other\AdditionalData\AdditionalDataList.cshtml(102): error CS1002: 应输入 ;
+-----------------------------------------
+
+时间:2019-03-11 10:21:14,365日志内容:在控制器“DataWall.Controllers.Admin.OtherController”上未找到公共操作方法“LogList”。
+-----------------------------------------
+
+时间:2019-03-11 10:21:20,025日志内容:在控制器“DataWall.Controllers.Admin.OtherController”上未找到公共操作方法“LogList”。
+-----------------------------------------
+
+时间:2019-03-11 10:23:09,330日志内容:在控制器“DataWall.Controllers.Admin.OtherController”上未找到公共操作方法“LogList”。
+-----------------------------------------
+
+时间:2019-03-11 10:23:14,830日志内容:在控制器“DataWall.Controllers.Admin.OtherController”上未找到公共操作方法“LogList”。
+-----------------------------------------
+
+时间:2019-03-11 10:24:56,958日志内容:在控制器“DataWall.Controllers.Admin.OtherController”上未找到公共操作方法“LogList”。
+-----------------------------------------
+
+时间:2019-03-11 10:25:28,270日志内容:在控制器“DataWall.Controllers.Admin.OtherController”上未找到公共操作方法“LogList”。
+-----------------------------------------
+
+时间:2019-03-11 11:17:52,077日志内容:未找到视图“LogList”或其母版视图，或没有视图引擎支持搜索的位置。搜索了以下位置: 
+~/Views/Admin/Other/LogList.cshtml
+~/Views/Admin/Other/NewBook/LogList.cshtml
+~/Views/Admin/Other/Notice/LogList.cshtml
+~/Views/Admin/Other/Slide/LogList.cshtml
+~/Views/Admin/Other/Video/LogList.cshtml
+~/Views/Admin/Other/AdditionalData/LogList.cshtml
+~/Views/Admin/Other/CustDevice/LogList.cshtml
+~/Views/Admin/Other/Modules/LogList.cshtml
+~/Views/Other/LogList.cshtml
+~/Views/Shared/LogList.cshtml
+-----------------------------------------
+
+时间:2019-03-11 11:18:40,660日志内容:未找到视图“LogList”或其母版视图，或没有视图引擎支持搜索的位置。搜索了以下位置: 
+~/Views/Admin/Other/LogList.cshtml
+~/Views/Admin/Other/NewBook/LogList.cshtml
+~/Views/Admin/Other/Notice/LogList.cshtml
+~/Views/Admin/Other/Slide/LogList.cshtml
+~/Views/Admin/Other/Video/LogList.cshtml
+~/Views/Admin/Other/AdditionalData/LogList.cshtml
+~/Views/Admin/Other/CustDevice/LogList.cshtml
+~/Views/Admin/Other/Modules/LogList.cshtml
+~/Views/Other/LogList.cshtml
+~/Views/Shared/LogList.cshtml
+-----------------------------------------
+
+时间:2019-03-11 11:18:42,157日志内容:未找到视图“LogList”或其母版视图，或没有视图引擎支持搜索的位置。搜索了以下位置: 
+~/Views/Admin/Other/LogList.cshtml
+~/Views/Admin/Other/NewBook/LogList.cshtml
+~/Views/Admin/Other/Notice/LogList.cshtml
+~/Views/Admin/Other/Slide/LogList.cshtml
+~/Views/Admin/Other/Video/LogList.cshtml
+~/Views/Admin/Other/AdditionalData/LogList.cshtml
+~/Views/Admin/Other/CustDevice/LogList.cshtml
+~/Views/Admin/Other/Modules/LogList.cshtml
+~/Views/Other/LogList.cshtml
+~/Views/Shared/LogList.cshtml
+-----------------------------------------
+
+时间:2019-03-11 11:20:03,367日志内容:未找到视图“LogList”或其母版视图，或没有视图引擎支持搜索的位置。搜索了以下位置: 
+~/Views/Admin/Other/LogList.cshtml
+~/Views/Admin/Other/NewBook/LogList.cshtml
+~/Views/Admin/Other/Notice/LogList.cshtml
+~/Views/Admin/Other/Slide/LogList.cshtml
+~/Views/Admin/Other/Video/LogList.cshtml
+~/Views/Admin/Other/AdditionalData/LogList.cshtml
+~/Views/Admin/Other/CustDevice/LogList.cshtml
+~/Views/Admin/Other/Modules/LogList.cshtml
+~/Views/Other/LogList.cshtml
+~/Views/Shared/LogList.cshtml
+-----------------------------------------
+
+时间:2019-03-11 11:23:49,801日志内容:未找到视图“LogList”或其母版视图，或没有视图引擎支持搜索的位置。搜索了以下位置: 
+~/Views/Admin/Other/LogList.cshtml
+~/Views/Admin/Other/NewBook/LogList.cshtml
+~/Views/Admin/Other/Notice/LogList.cshtml
+~/Views/Admin/Other/Slide/LogList.cshtml
+~/Views/Admin/Other/Video/LogList.cshtml
+~/Views/Admin/Other/AdditionalData/LogList.cshtml
+~/Views/Admin/Other/CustDevice/LogList.cshtml
+~/Views/Admin/Other/Modules/LogList.cshtml
+~/Views/Other/LogList.cshtml
+~/Views/Shared/LogList.cshtml
+-----------------------------------------
+
+时间:2019-03-11 11:24:43,034日志内容:未找到视图“LogList”或其母版视图，或没有视图引擎支持搜索的位置。搜索了以下位置: 
+~/Views/Admin/Other/LogList.cshtml
+~/Views/Admin/Other/NewBook/LogList.cshtml
+~/Views/Admin/Other/Notice/LogList.cshtml
+~/Views/Admin/Other/Slide/LogList.cshtml
+~/Views/Admin/Other/Video/LogList.cshtml
+~/Views/Admin/Other/AdditionalData/LogList.cshtml
+~/Views/Admin/Other/CustDevice/LogList.cshtml
+~/Views/Admin/Other/Modules/LogList.cshtml
+~/Views/Other/LogList.cshtml
+~/Views/Shared/LogList.cshtml
+-----------------------------------------
+
+时间:2019-03-11 11:26:41,298日志内容:未找到视图“LogList”或其母版视图，或没有视图引擎支持搜索的位置。搜索了以下位置: 
+~/Views/Admin/Other/LogList.cshtml
+~/Views/Admin/Other/NewBook/LogList.cshtml
+~/Views/Admin/Other/Notice/LogList.cshtml
+~/Views/Admin/Other/Slide/LogList.cshtml
+~/Views/Admin/Other/Video/LogList.cshtml
+~/Views/Admin/Other/AdditionalData/LogList.cshtml
+~/Views/Admin/Other/CustDevice/LogList.cshtml
+~/Views/Admin/Other/Modules/LogList.cshtml
+~/Views/Other/LogList.cshtml
+~/Views/Shared/LogList.cshtml
+-----------------------------------------
+
+时间:2019-03-11 11:28:37,244日志内容:未找到视图“LogList”或其母版视图，或没有视图引擎支持搜索的位置。搜索了以下位置: 
+~/Views/Admin/Other/LogList.cshtml
+~/Views/Admin/Other/NewBook/LogList.cshtml
+~/Views/Admin/Other/Notice/LogList.cshtml
+~/Views/Admin/Other/Slide/LogList.cshtml
+~/Views/Admin/Other/Video/LogList.cshtml
+~/Views/Admin/Other/AdditionalData/LogList.cshtml
+~/Views/Admin/Other/CustDevice/LogList.cshtml
+~/Views/Admin/Other/Modules/LogList.cshtml
+~/Views/Other/LogList.cshtml
+~/Views/Shared/LogList.cshtml
+-----------------------------------------
+
+时间:2019-03-11 11:29:10,729日志内容:未找到视图“loglist”或其母版视图，或没有视图引擎支持搜索的位置。搜索了以下位置: 
+~/Views/Admin/Other/loglist.cshtml
+~/Views/Admin/Other/NewBook/loglist.cshtml
+~/Views/Admin/Other/Notice/loglist.cshtml
+~/Views/Admin/Other/Slide/loglist.cshtml
+~/Views/Admin/Other/Video/loglist.cshtml
+~/Views/Admin/Other/AdditionalData/loglist.cshtml
+~/Views/Admin/Other/CustDevice/loglist.cshtml
+~/Views/Admin/Other/Modules/loglist.cshtml
+~/Views/Other/loglist.cshtml
+~/Views/Shared/loglist.cshtml
+-----------------------------------------
+
+时间:2019-03-11 15:31:44,229日志内容:未将对象引用设置到对象的实例。
+-----------------------------------------
+
+时间:2019-03-11 15:31:57,802日志内容:未将对象引用设置到对象的实例。
+-----------------------------------------
+
+时间:2019-03-11 15:32:03,999日志内容:未将对象引用设置到对象的实例。
+-----------------------------------------
+
+时间:2019-03-11 15:32:11,317日志内容:未将对象引用设置到对象的实例。
+-----------------------------------------
+
+时间:2019-03-11 15:32:34,059日志内容:未将对象引用设置到对象的实例。
+-----------------------------------------
+
+时间:2019-03-11 16:09:57,608日志内容:调用的目标发生了异常。
+-----------------------------------------
+
+时间:2019-03-11 16:10:59,836日志内容:调用的目标发生了异常。
+-----------------------------------------
+
+时间:2019-03-11 16:12:10,108日志内容:调用的目标发生了异常。
+-----------------------------------------
+
+时间:2019-03-11 16:12:56,727日志内容:调用的目标发生了异常。
+-----------------------------------------
+
+时间:2019-03-11 16:15:14,386日志内容:调用的目标发生了异常。
+-----------------------------------------
+
+时间:2019-03-11 16:16:00,862日志内容:调用的目标发生了异常。
+-----------------------------------------
+
+时间:2019-03-11 16:16:29,585日志内容:调用的目标发生了异常。
+-----------------------------------------
+
+时间:2019-03-11 16:21:41,079日志内容:调用的目标发生了异常。
+-----------------------------------------
+
+时间:2019-03-11 16:22:08,310日志内容:调用的目标发生了异常。
+-----------------------------------------
+
+时间:2019-03-11 16:22:51,727日志内容:调用的目标发生了异常。
+-----------------------------------------
+
+时间:2019-03-11 16:23:22,424日志内容:调用的目标发生了异常。
+-----------------------------------------
+
+时间:2019-03-11 16:41:10,318日志内容:调用的目标发生了异常。
+-----------------------------------------
+
+时间:2019-03-11 16:43:17,241日志内容:JSON GET is not allowed
+-----------------------------------------
+
+时间:2019-03-11 16:43:23,666日志内容:JSON GET is not allowed
+-----------------------------------------
+
+时间:2019-03-11 16:57:40,521日志内容:此请求已被阻止，因为当用在 GET 请求中时，会将敏感信息透漏给第三方网站。若要允许 GET 请求，请将 JsonRequestBehavior 设置为 AllowGet。
+-----------------------------------------
+

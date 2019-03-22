@@ -1,0 +1,21 @@
+﻿@model Model.SysFile
+@using Model
+@using Common
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="weadmin-body">
+    <div class="layui-upload">
+        <input type="hidden" id="Id" value="@ViewBag.Id" />
+        <button type="button" class="layui-btn" id="FileAdd">图片上传</button>
+        <blockquote class="layui-elem-quote layui-quote-nm w-e-toolbar" id="filelist" style="margin-top: 10px;">
+            @foreach (SysFile item in ViewData["datalist"] as List<SysFile>)
+            {
+                <a title="删除" id="@item.ID" onclick="member_del(this,'@item.ID')" href="javascript:;">
+                    <img style="max-width:100px;margin-right:5px" src="@item.ThumbImage" alt="@item.FilePath" class="layui-upload-img">
+                </a>
+            }
+        </blockquote>
+    </div>
+</div>
+<script src="@HtmlHelperExtend.GetCssJsUrl(Url.Content("~/Content/slideimgedit/js"))" type="text/javascript" charset="utf-8"></script>

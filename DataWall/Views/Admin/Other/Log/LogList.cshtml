@@ -1,0 +1,71 @@
+﻿@using PagedList.Mvc;
+@model PagedList.IPagedList<Model.SysLog>
+@using Model
+@using Common
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<link rel="stylesheet" href="@HtmlHelperExtend.GetCssJsUrl(Url.Content("~/Content/PagedList/css"))">
+<div class="weadmin-nav">
+    <span class="layui-breadcrumb">
+        <a href="javascript:;">首页</a>
+        <a href="javascript:;">系统设置</a>
+        <a>
+            <cite>操作日志</cite>
+        </a>
+    </span>
+    <a class="layui-btn layui-btn-sm" style="line-height:1.6em;margin-top:3px;float:right" href="javascript:location.replace(location.href);" title="刷新">
+        <i class="layui-icon" style="line-height:30px">&#xe669;</i>
+    </a>
+</div>
+<div class="weadmin-body">
+    <div class="layui-row">
+        @using (Html.BeginForm("LogList", "Other", FormMethod.Post, new { @class = "layui-form layui-col-md12 we-search", @id = "frmSearch" }))
+        {
+            <div class="layui-inline">
+                日志类型：
+            </div>
+            <div class="layui-inline">
+                <input type="text" name="keyword" value="@ViewBag.keyword" autocomplete="off" class="layui-input">
+            </div>
+            <input type="hidden" name="page" value="1" />
+            <button class="layui-btn" lay-submit="" lay-filter="sreach"><i class="layui-icon">&#xe615;</i></button>
+        }
+    </div>
+    <div class="weadmin-block" style="padding:25px 6px;line-height:3px">
+        <span class="fr">共有数据：@ViewBag.DataCout 条</span>
+    </div>
+    <table class="layui-table">
+        <thead>
+            <tr>
+                <th>日志类型</th>
+                <th>操作用户</th>
+                <th>IP</th>
+                <th>地址</th>
+                <th>添加时间</th>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@item.Details</td>
+                    <td>@item.UserName</td>
+                    <td>@item.Ip</td>
+                    <td>@item.Address</td>
+                    <td>@item.CrateTime</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+    @if (Model.TotalItemCount > 10)
+    {
+        <div class="page">
+            <div>
+                @Html.PagedListPager(Model, page => Url.Action("LogList", new { page }))
+            </div>
+        </div>
+    }
+</div>
+<input type="hidden" id="libraryId" value="@ViewBag.library" />
+<script src="@HtmlHelperExtend.GetCssJsUrl(Url.Content("~/Other/loglist/js"))" type="text/javascript" charset="utf-8"></script>
+

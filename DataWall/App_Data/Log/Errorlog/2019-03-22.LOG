@@ -1,0 +1,58 @@
+﻿时间:2019-03-22 13:47:30,418日志内容:在控制器“DataWall.Controllers.Home.HomeController”上未找到公共操作方法“客流分时统计”。
+-----------------------------------------
+
+时间:2019-03-22 14:34:00,503日志内容:在控制器“DataWall.Controllers.Home.HomeController”上未找到公共操作方法“Index2”。
+-----------------------------------------
+
+时间:2019-03-22 14:43:21,006日志内容:Self referencing loop detected for property 'SysLibrary' with type 'Model.SysLibrary'. Path 'SysModulars[0]'.
+-----------------------------------------
+
+时间:2019-03-22 14:43:37,446日志内容:Self referencing loop detected for property 'SysLibrary' with type 'Model.SysLibrary'. Path 'SysModulars[0]'.
+-----------------------------------------
+
+时间:2019-03-22 14:43:42,515日志内容:Self referencing loop detected for property 'SysLibrary' with type 'Model.SysLibrary'. Path 'SysModulars[0]'.
+-----------------------------------------
+
+时间:2019-03-22 14:43:50,540日志内容:Self referencing loop detected for property 'SysLibrary' with type 'Model.SysLibrary'. Path 'SysModulars[0]'.
+-----------------------------------------
+
+时间:2019-03-22 14:43:54,637日志内容:Self referencing loop detected for property 'SysLibrary' with type 'Model.SysLibrary'. Path 'SysModulars[0]'.
+-----------------------------------------
+
+时间:2019-03-22 14:43:56,367日志内容:Self referencing loop detected for property 'SysLibrary' with type 'Model.SysLibrary'. Path 'SysModulars[0]'.
+-----------------------------------------
+
+时间:2019-03-22 14:43:57,430日志内容:Self referencing loop detected for property 'SysLibrary' with type 'Model.SysLibrary'. Path 'SysModulars[0]'.
+-----------------------------------------
+
+时间:2019-03-22 14:43:58,353日志内容:Self referencing loop detected for property 'SysLibrary' with type 'Model.SysLibrary'. Path 'SysModulars[0]'.
+-----------------------------------------
+
+时间:2019-03-22 14:43:59,062日志内容:Self referencing loop detected for property 'SysLibrary' with type 'Model.SysLibrary'. Path 'SysModulars[0]'.
+-----------------------------------------
+
+时间:2019-03-22 14:44:48,656日志内容:Self referencing loop detected for property 'SysLibrary' with type 'Model.SysLibrary'. Path 'SysModulars[0]'.
+-----------------------------------------
+
+时间:2019-03-22 14:45:59,124日志内容:Self referencing loop detected for property 'SysLibrary' with type 'Model.SysLibrary'. Path 'SysModulars[0]'.
+-----------------------------------------
+
+时间:2019-03-22 14:47:34,574日志内容:Self referencing loop detected for property 'SysLibrary' with type 'Model.SysLibrary'. Path 'SysModulars[0]'.
+-----------------------------------------
+
+时间:2019-03-22 14:51:00,234日志内容:Self referencing loop detected for property 'SysLibrary' with type 'Model.SysLibrary'. Path 'SysModulars[0]'.
+-----------------------------------------
+
+时间:2019-03-22 14:59:08,886日志内容:Self referencing loop detected for property 'SysLibrary' with type 'Model.SysLibrary'. Path 'SysModulars[0]'.
+-----------------------------------------
+
+时间:2019-03-22 14:59:45,005日志内容:Self referencing loop detected for property 'SysLibrary' with type 'Model.SysLibrary'. Path 'SysModulars[0]'.
+-----------------------------------------
+
+时间:2019-03-22 15:27:04,145日志内容:值不能为 null。
+参数名: value
+-----------------------------------------
+
+时间:2019-03-22 15:29:46,213日志内容:Unexpected character encountered while parsing value: O. Path '', line 0, position 0.
+-----------------------------------------
+

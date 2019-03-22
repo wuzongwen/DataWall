@@ -1,0 +1,33 @@
+﻿时间:2019-03-20 10:55:07,547日志内容:f:\数据墙相关\项目源码\标准版\源码\DataWall\Views\Error\ErrorLoginTimeout.cshtml(51): error CS0103: 当前上下文中不存在名称“HtmlHelperExtend”
+-----------------------------------------
+
+时间:2019-03-20 10:56:04,434日志内容:f:\数据墙相关\项目源码\标准版\源码\DataWall\Views\Error\ErrorLoginTimeout.cshtml(51): error CS0103: 当前上下文中不存在名称“HtmlHelperExtend”
+-----------------------------------------
+
+时间:2019-03-20 11:00:43,694日志内容:在控制器“DataWall.Controllers.ErrorController”上未找到公共操作方法“errortimeout”。
+-----------------------------------------
+
+时间:2019-03-20 11:00:59,432日志内容:在控制器“DataWall.Controllers.ErrorController”上未找到公共操作方法“errortimeout”。
+-----------------------------------------
+
+时间:2019-03-20 11:01:08,896日志内容:在控制器“DataWall.Controllers.ErrorController”上未找到公共操作方法“errortimeout”。
+-----------------------------------------
+
+时间:2019-03-20 11:01:27,904日志内容:在控制器“DataWall.Controllers.ErrorController”上未找到公共操作方法“errortimeout”。
+-----------------------------------------
+
+时间:2019-03-20 11:01:38,638日志内容:在控制器“DataWall.Controllers.ErrorController”上未找到公共操作方法“errortimeout”。
+-----------------------------------------
+
+时间:2019-03-20 11:01:48,578日志内容:在控制器“DataWall.Controllers.ErrorController”上未找到公共操作方法“errortimeout”。
+-----------------------------------------
+
+时间:2019-03-20 11:01:54,269日志内容:在控制器“DataWall.Controllers.ErrorController”上未找到公共操作方法“errortimeout”。
+-----------------------------------------
+
+时间:2019-03-20 11:16:48,737日志内容:执行处理程序“System.Web.Mvc.HttpHandlerUtil+ServerExecuteHttpHandlerAsyncWrapper”的子请求时出错。
+-----------------------------------------
+
+时间:2019-03-20 11:25:40,492日志内容:未找到路径“/通知公告”的控制器或该控制器未实现 IController。
+-----------------------------------------
+

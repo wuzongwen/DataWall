@@ -1,0 +1,36 @@
+﻿@using Common
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    <link rel="shortcut icon" href="@Url.Content("~/Content/Admin/favicon.ico")" type="image/x-icon" />
+    <link rel="stylesheet" href="@HtmlHelperExtend.GetCssJsUrl(Url.Content("~/Content/Layui/style"))">
+    <script src="@HtmlHelperExtend.GetCssJsUrl(Url.Content("~/Content/jquery/js"))"></script>
+    <script src="@HtmlHelperExtend.GetCssJsUrl(Url.Content("~/Content/layui/js"))"></script>
+    <!-- 内容同步 -->
+    <script src="@HtmlHelperExtend.GetCssJsUrl(Url.Content("~/Content/SignalR/jquery.signalR-2.4.0.min.js"))"></script>
+    <script src="~/signalr/hubs"></script>
+    <script>
+        //获取场馆名
+        var LibraryName="@ViewBag.Title";
+    </script>
+    <script src="@HtmlHelperExtend.GetCssJsUrl(Url.Content("~/Home/DataSync/js"))"></script>
+    <!-- 内容同步结束-->
+    <!-- 模块刷新 -->
+    <script src="@HtmlHelperExtend.GetCssJsUrl(Url.Content("~/Home/ModuleSet/js"))"></script>
+</head>
+<body>
+    <div class="layui-container" style="width:100%">
+        <div class="layui-row">
+            <div class="layui-col-xs12 layui-col-sm6 layui-col-md4"></div>
+            <div class="layui-col-xs12 layui-col-sm6 layui-col-md4"></div>
+            <div class="layui-col-xs12 layui-col-sm6 layui-col-md4"></div>
+            <div class="layui-col-xs12 layui-col-sm6 layui-col-md4"></div>
+            <div class="layui-col-xs12 layui-col-sm6 layui-col-md4"></div>
+            <div class="layui-col-xs12 layui-col-sm6 layui-col-md4"></div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,96 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<style>
+    .modular_ok {
+        font-size: 30px;
+        color: #1E9FFF;
+        line-height: 100px;
+        margin-left: 10px;
+        text-align: center;
+        position: absolute
+    }
+</style>
+<div class="weadmin-body">
+    <div style="padding: 15px; background-color: #F2F2F2;">
+        <div class="layui-row layui-col-space15">
+            <div class="layui-col-md4">
+                <div class="layui-card" style="cursor:pointer" onclick="modular_click(this,'1')">
+                    <div class="layui-card-header">模板一</div>
+                    <div class="layui-card-body" style="text-align:center;">
+                        <img style="border:2px solid #000" src="~/Content/Admin/static/images/Modular/Modular1.jpg" />
+                        <i class='layui-icon layui-icon-ok modular_ok'></i>
+                    </div>
+                </div>
+            </div>
+            <div class="layui-col-md4">
+                <div class="layui-card" style="cursor:pointer" onclick="modular_click(this,'2')">
+                    <div class="layui-card-header">模板二</div>
+                    <div class="layui-card-body" style="text-align:center">
+                        <img style="border:2px solid #000" src="~/Content/Admin/static/images/Modular/Modular2.jpg" />
+                    </div>
+                </div>
+            </div>
+            <div class="layui-col-md4">
+                <div class="layui-card" style="cursor:pointer" onclick="modular_click(this,'3')">
+                    <div class="layui-card-header">模板三</div>
+                    <div class="layui-card-body" style="text-align:center">
+                        <img style="border:2px solid #000" src="~/Content/Admin/static/images/Modular/Modular3.jpg" />
+                    </div>
+                </div>
+            </div>
+            <div class="layui-col-md4">
+                <div class="layui-card" style="cursor:pointer" onclick="modular_click(this,'4')">
+                    <div class="layui-card-header">模板四</div>
+                    <div class="layui-card-body" style="text-align:center">
+                        <img style="border:2px solid #000" src="~/Content/Admin/static/images/Modular/Modular4.jpg" />
+                    </div>
+                </div>
+            </div>
+            <div class="layui-col-md4">
+                <div class="layui-card" style="cursor:pointer" onclick="modular_click(this,'5')">
+                    <div class="layui-card-header">模板五</div>
+                    <div class="layui-card-body" style="text-align:center">
+                        <img style="border:2px solid #000" src="~/Content/Admin/static/images/Modular/Modular5.jpg" />
+                    </div>
+                </div>
+            </div>
+            <div class="layui-col-md4">
+                <div class="layui-card" style="cursor:pointer" onclick="modular_click(this,'6')">
+                    <div class="layui-card-header">模板六</div>
+                    <div class="layui-card-body" style="text-align:center">
+                        <img style="border:2px solid #000" src="~/Content/Admin/static/images/Modular/Modular6.jpg" />
+                    </div>
+                </div>
+            </div>
+            <div class="layui-col-md12" style="text-align:center"><a href="javascript:;" class="layui-btn" target="_blank">确认选择</a></div>
+        </div>
+    </div>
+    <input type="hidden" value="1" id="modularstyle" />
+</div>
+<script>
+    //一般直接写在一个js文件中
+    layui.use(['layer', 'form', 'jquery', 'admin'], function () {
+        var layer = layui.layer,
+            $ = layui.jquery,
+            form = layui.form,
+            admin = layui.admin;
+
+        window.modular_click = function (obj, id) {
+            $('.layui-card-body i').remove();
+            $(obj).find('.layui-card-body').append("<i class='layui-icon layui-icon-ok modular_ok'></i>");
+            $('#modularstyle').val(id);
+        }
+
+        $('.layui-btn').click(function () {
+            //询问框
+            layer.confirm('确认后将无法更改？', {
+                btn: ['确认选择', '重新选择'] //按钮
+            }, function () {
+               location.href = "/Module/ModuleEdit?Id=@(ViewBag.Id)&Style=" + $('#modularstyle').val();
+                }, function () {
+                    layer.msg("请重新选择");
+            });
+        })
+    });
+</script>

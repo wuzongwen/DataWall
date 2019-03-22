@@ -1,0 +1,229 @@
+﻿@using Model
+@using Common
+<div class="layui-fluid">
+    <div class="layui-row layui-col-space10">
+        <div class="layui-col-md4">
+            <div class="layui-card">
+                <div class="layui-card-header layui-bg-blue">区域一</div>
+                <div class="layui-card-body">
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">内容选择</label>
+                        <div class="layui-input-block" lay-verify-msg="请选择区域一内容" lay-verify="mustcheck">
+                            @foreach (SysModule item in ViewData["datalist"] as List<SysModule>)
+                            {
+                                <input type="checkbox" name="@item.Title" value="0" lay-filter="edit" title="@item.Title">
+                            }
+                        </div>
+                    </div>
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">切换时间</label>
+                        <div class="layui-input-inline" style="max-width:65px">
+                            <input type="text" name="time" value="0" lay-verify="number" placeholder="请输入" autocomplete="off" class="layui-input">
+                        </div>
+                        <div class="layui-form-mid">秒</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="layui-col-md4">
+            <div class="layui-card">
+                <div class="layui-card-header layui-bg-blue">区域二</div>
+                <div class="layui-card-body">
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">内容选择</label>
+                        <div class="layui-input-block" lay-verify-msg="请选择区域二内容" lay-verify="mustcheck">
+                            @foreach (SysModule item in ViewData["datalist"] as List<SysModule>)
+                            {
+                                <input type="checkbox" name="@item.Title" value="0" lay-filter="edit" title="@item.Title">
+                            }
+                        </div>
+                    </div>
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">切换时间</label>
+                        <div class="layui-input-inline" style="max-width:65px">
+                            <input type="text" name="time" value="0" lay-verify="number" placeholder="请输入" autocomplete="off" class="layui-input">
+                        </div>
+                        <div class="layui-form-mid">秒</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="layui-col-md4">
+            <div class="layui-card">
+                <div class="layui-card-header layui-bg-blue">区域三</div>
+                <div class="layui-card-body">
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">内容选择</label>
+                        <div class="layui-input-block" lay-verify-msg="请选择区域三内容" lay-verify="mustcheck">
+                            @foreach (SysModule item in ViewData["datalist"] as List<SysModule>)
+                            {
+                                <input type="checkbox" name="@item.Title" value="0" lay-filter="edit" title="@item.Title">
+                            }
+                        </div>
+                    </div>
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">切换时间</label>
+                        <div class="layui-input-inline" style="max-width:65px">
+                            <input type="text" name="time" value="0" lay-verify="number" placeholder="请输入" autocomplete="off" class="layui-input">
+                        </div>
+                        <div class="layui-form-mid">秒</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="layui-row layui-col-space10">
+        <div class="layui-col-md4">
+            <div class="layui-card">
+                <div class="layui-card-header layui-bg-blue">区域四</div>
+                <div class="layui-card-body">
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">内容选择</label>
+                        <div class="layui-input-block" lay-verify-msg="请选择区域四内容" lay-verify="mustcheck">
+                            @foreach (SysModule item in ViewData["datalist"] as List<SysModule>)
+                            {
+                                <input type="checkbox" name="@item.Title" value="0" lay-filter="edit" title="@item.Title">
+                            }
+                        </div>
+                    </div>
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">切换时间</label>
+                        <div class="layui-input-inline" style="max-width:65px">
+                            <input type="text" name="time" value="0" lay-verify="number" placeholder="请输入" autocomplete="off" class="layui-input">
+                        </div>
+                        <div class="layui-form-mid">秒</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="layui-col-md4">
+            <div class="layui-card">
+                <div class="layui-card-header layui-bg-blue">区域五</div>
+                <div class="layui-card-body">
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">内容选择</label>
+                        <div class="layui-input-block" lay-verify-msg="请选择区域五内容" lay-verify="mustcheck">
+                            @foreach (SysModule item in ViewData["datalist"] as List<SysModule>)
+                            {
+                                <input type="checkbox" name="@item.Title" value="0" lay-filter="edit" title="@item.Title">
+                            }
+                        </div>
+                    </div>
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">切换时间</label>
+                        <div class="layui-input-inline" style="max-width:65px">
+                            <input type="text" name="time" value="0" lay-verify="number" placeholder="请输入" autocomplete="off" class="layui-input">
+                        </div>
+                        <div class="layui-form-mid">秒</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="layui-col-md4">
+            <div class="layui-card">
+                <div class="layui-card-header layui-bg-blue">区域六</div>
+                <div class="layui-card-body">
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">内容选择</label>
+                        <div class="layui-input-block" lay-verify-msg="请选择区域六内容" lay-verify="mustcheck">
+                            @foreach (SysModule item in ViewData["datalist"] as List<SysModule>)
+                            {
+                                <input type="checkbox" name="@item.Title" value="0" lay-filter="edit" title="@item.Title">
+                            }
+                        </div>
+                    </div>
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">切换时间</label>
+                        <div class="layui-input-inline" style="max-width:65px">
+                            <input type="text" name="time" value="0" lay-verify="number" placeholder="请输入" autocomplete="off" class="layui-input">
+                        </div>
+                        <div class="layui-form-mid">秒</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    //一般直接写在一个js文件中
+    layui.use(['layer','form', 'jquery'], function () {
+        var layer = layui.layer,
+            $ = layui.jquery,
+            form = layui.form;
+
+        $.ajax({
+                type: 'post',
+                url: '/Module/GetSeting',
+                dataType: 'json',
+                data: {
+                    Id: @(ViewBag.LibraryId),
+                },
+                beforeSend: function () {
+                    //加载层-风格4
+                    layer.load(1, {
+                        content: '设置加载中',
+                        shade: [0.4, '#393D49'],
+                        // time: 10 * 1000,
+                        success: function (layero) {
+                            layero.css('padding-left', '30px');
+                            layero.find('.layui-layer-content').css({
+                                'padding-top': '40px',
+                                'width': '70px',
+                                'background-position-x': '16px'
+                            });
+                        }
+                    });
+                },
+                complete: function () {
+                    layer.closeAll("loading");
+                },
+                error: function (XMLHttpRequest, status, thrownError) {
+                    layer.msg('网络繁忙，请稍后重试...');
+                    return false;
+                },
+                success: function (msg) {
+                    var code = msg.code;
+                    switch (code) {
+                        case '200':
+                            var ModuleSet = $.parseJSON(msg.data.SysSeting);
+                            //模块功能设置
+                            $.each(ModuleSet.Module, function (idx, obj) {
+                                $.each(obj, function (i, n) {
+                                    //设置选中状态
+                                    $('.layui-col-md4').eq(idx).find('.layui-input-block').eq(0).find($("input[name=" + obj[i] + "]")).attr("checked", "checked");
+                                    //禁用选中按钮的其他同名按钮
+                                    $("input[name='" + obj[i] + "']").attr("disabled", "disabled");
+                                    //取消选中按钮的禁用状态
+                                    $('.layui-col-md4').eq(idx).find('.layui-input-block').eq(0).find($("input[name=" + obj[i] + "]")).removeAttr("disabled");
+                                    //重新渲染
+                                    form.render('checkbox');
+
+                                    //模块切换时间设置
+                                    $('.layui-col-md4').eq(idx).find('.layui-input-inline').eq(0).find($("input[name=time]")).val(ModuleSet.Time[idx]);
+                                });
+                            });
+                            break;
+                        case '201':
+                            layer.msg(msg.msg);
+                            break;
+                        case '202':
+                            layer.msg(msg.msg);
+                            break;
+                        case '401':
+                            layer.msg(msg.msg, {
+                                icon: 5,
+                                time: 1000
+                            });
+                            break;
+                        case '402':
+                            layer.alert(msg.msg, { icon: 5 }, function () {
+                                //跳转到登录页
+                                top.location.href = msg.url;
+                            });
+                            break;
+                    }
+                    return false;
+                }
+            });
+    });
+</script>

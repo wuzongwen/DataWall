@@ -1,0 +1,246 @@
+﻿@using Model
+@model DataWall.ViewModels.SystemInfo
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="weadmin-body">
+    <blockquote class="layui-elem-quote">欢迎使用数据墙管理系统！@(new HtmlString(ViewBag.Msg))</blockquote>
+    <div class="layui-fluid" style="overflow: hidden;">
+        <div class="layui-row layui-col-space15">
+            <div class="layui-col-md12">
+                <div class="layui-card">
+                    <div class="layui-card-header">模块介绍</div>
+                    <div class="layui-card-body">
+                        <div class="layui-carousel weadmin-shortcut" lay-filter="shortcut" lay-indicator="inside" lay-arrow="none" style="width: 100%; height: 280px;">
+                            <div carousel-item="">
+                                <ul class="layui-row layui-col-space10 layui-this">
+                                    @{int i = 0;}
+                                    @foreach (SysModule menu in ViewData["modulelist"] as List<SysModule>)
+                                    {
+                                        <li class="layui-col-xs3">
+                                            <i class="layui-icon"></i>
+                                            <cite>@menu.Title</cite>
+                                            <p><span>@menu.Describe</span></p>
+                                        </li>
+                                        i++;
+                                        if (i == 4) { break; }
+                                    }
+                                </ul>
+                                @{ var list = ViewData["modulelist"] as List<SysModule>; }
+                                @{ if (list.Count > 4)
+                                    {
+                                        <ul class="layui-row layui-col-space10">
+                                            @{int j = 0;}
+                                            @foreach (var item in list.Skip(4))
+                                            {
+                                                <li class="layui-col-xs3">
+                                                    <i class="layui-icon"></i>
+                                                    <cite>@item.Title</cite>
+                                                    <p><span>@item.Describe</span></p>
+                                                </li>
+                                                j++;
+                                                if (j == 4) { break; }
+                                            }
+                                        </ul>
+                                    }
+                                }
+                                @{ if (list.Count > 8)
+                                    {
+                                        <ul class="layui-row layui-col-space10">
+                                            @{int j = 0;}
+                                            @foreach (var item in list.Skip(8))
+                                            {
+                                                <li class="layui-col-xs3">
+                                                    <i class="layui-icon"></i>
+                                                    <cite>@item.Title</cite>
+                                                    <p><span>@item.Describe</span></p>
+                                                </li>
+                                                j++;
+                                                if (j == 4) { break; }
+                                            }
+                                        </ul>
+                                                }
+                                }
+                            </div>  
+                            <div class="layui-carousel-ind">
+                                <ul>
+                                    <li class="layui-this"></li>
+                                    <li></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="layui-col-lg12 layui-collapse" style="border: none;">
+        <div class="layui-col-lg6 layui-col-md12">
+            <!--信息展示-->
+            <fieldset class="layui-elem-field" style="padding: 5px;">
+                <!--系统公告-->
+                <div class="layui-card">
+                    <div class="layui-card-header layui-elem-quote">系统日志</div>
+                    <div class="layui-card-body">
+                        <div class="layui-carousel weadmin-notice" lay-filter="notice" lay-indicator="inside" lay-arrow="none" style="width: 100%; height: 280px;">
+                            <div carousel-item="">
+                                @foreach (SysLog lib in ViewData["datalist"] as List<SysLog>)
+                                {
+                                    <div class="">
+                                        @{
+                                            switch (lib.Type)
+                                            {
+                                                case 1:
+                                                    <a href="javascript:;" class="layui-bg-green">用户:@(lib.UserName)于@(lib.CrateTime)@lib.Details</a>
+                                                    break;
+                                                case 2:
+                                                    <a href="javascript:;" class="layui-bg-blue">用户:@(lib.UserName)于@(lib.CrateTime)@lib.Details</a>
+                                                    break;
+                                                case 3:
+                                                    <a href="javascript:;" class="layui-bg-red">用户:@(lib.UserName)于@(lib.CrateTime)@lib.Details</a>
+                                                    break;
+                                            }
+                                        }
+                                    </div>
+                                            }
+                            </div>
+                            <div class="layui-carousel-ind">
+                                <ul>
+                                    <li class="layui-this"></li>
+                                    <li></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </fieldset>
+            <div class="layui-card">
+                <div class="layui-card-header">
+                    数据墙管理系统
+                    <i class="layui-icon" style="color: #FF5722;">&#xe756;</i>
+                </div>
+                <div class="layui-card-body layui-text weadmin-text">
+                    数据墙管理系统是一个针对大屏展示内容的管理软件，可对屏幕展示内容进行自主控制。
+                </div>
+            </div>
+        </div>
+        <div class="layui-col-lg6 layui-col-md12">
+            <!--<legend>信息统计</legend>-->
+            <blockquote class="layui-elem-quote font16">服务器信息</blockquote>
+            <div class="">
+                <table class="layui-table">
+                    <tbody>
+                        <tr>
+                            <th width="30%">软件版本</th>
+                            <td><span id="lbServerName">@ViewBag.ProgramVersion</span></td>
+                        </tr>
+                        <tr>
+                            <th width="30%">服务器系统版本</th>
+                            <td><span id="lbServerName">@Model.ServerVersion</span></td>
+                        </tr>
+                        <tr>
+                            <td>服务器IIS版本</td>
+                            <td>@Model.IISVersion</td>
+                        </tr>
+                        <tr>
+                            <td>服务器区域语言 </td>
+                            <td>@Model.ServerLanguage</td>
+                        </tr>
+                        <tr>
+                            <td>服务器CPU核心数</td>
+                            <td>@Model.CpuNumber</td>
+                        </tr>
+                        <tr>
+                            <td>.NET版本信息</td>
+                            <td>@Model.DotNetVersion</td>
+                        </tr>
+                        <tr>
+                            <td>程序路径</td>
+                            <td>@Model.AbsolutePath</td>
+                        </tr>
+                        <tr>
+                            <td>程序所在磁盘剩余空间</td>
+                            <td>@Model.HardDiskFreeSpace</td>
+                        </tr>
+                        <tr>
+                            <td>系统运行时间</td>
+                            <td>@(ViewBag.Time)小时</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <div style="clear: both;overflow: hidden; margin-top: 10px;">
+        <blockquote class="layui-elem-quote">
+            数据墙管理系统
+        </blockquote>
+    </div>
+</div>
+<script type="text/javascript">
+    layui.use(['jquery', 'element', 'util', 'admin', 'carousel'], function () {
+        var element = layui.element,
+            $ = layui.jquery,
+            carousel = layui.carousel,
+            util = layui.util,
+            admin = layui.admin;
+        //建造实例
+        carousel.render({
+            elem: '.weadmin-shortcut'
+            , width: '100%' //设置容器宽度
+            , arrow: 'none' //始终显示箭头
+            , trigger: 'hover'
+            , autoplay: false
+        });
+
+        $.each($('.layui-col-xs3'), function (i, item) {
+            switch ($(item).find('cite').html())
+            {
+                case "新书推荐":
+                    $(item).find('i').html("&#xe705;");
+                    break;
+                case "天气时间":
+                    $(item).find('i').html("&#xe636;");
+                    break;
+                case "客流统计":
+                    $(item).find('i').html("&#xe770;");
+                    break;
+                case "客流分时统计":
+                    $(item).find('i').html("&#xe62c;");
+                    break;
+                case "历史上的今天":
+                    $(item).find('i').html("&#xe60a;");
+                    break;
+                case "通知公告":
+                    $(item).find('i').html("&#xe63c;");
+                    break;
+                case "风采展示":
+                    $(item).find('i').html("&#xe6ed;");
+                    break;
+                case "照片墙":
+                    $(item).find('i').html("&#xe634;");
+                    break;
+                case "图书借阅排行榜":
+                    $(item).find('i').html("&#xe756;");
+                    break;
+                case "借阅统计":
+                    $(item).find('i').html("&#xe6b2;");
+                    break;
+                case "分时借还":
+                    $(item).find('i').html("&#xe629;");
+                    break;
+                default:
+                    $(item).find('i').html("&#xe638;");
+                    break;
+            }
+        });
+
+        carousel.render({
+            elem: '.weadmin-notice'
+            , width: '100%' //设置容器宽度
+            , arrow: 'none' //始终显示箭头
+            , trigger: 'hover'
+            , autoplay: true
+        });
+    });
+</script>

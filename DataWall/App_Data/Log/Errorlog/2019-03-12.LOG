@@ -1,0 +1,54 @@
+﻿时间:2019-03-12 11:48:55,697日志内容:This function can only be invoked from LINQ to Entities.
+-----------------------------------------
+
+时间:2019-03-12 13:21:07,356日志内容:内容添加失败:未将对象引用设置到对象的实例。
+-----------------------------------------
+
+时间:2019-03-12 13:24:30,115日志内容:内容添加失败:未将对象引用设置到对象的实例。
+-----------------------------------------
+
+时间:2019-03-12 13:25:22,041日志内容:内容添加失败:未将对象引用设置到对象的实例。
+-----------------------------------------
+
+时间:2019-03-12 13:25:40,136日志内容:内容添加失败:未将对象引用设置到对象的实例。
+-----------------------------------------
+
+时间:2019-03-12 13:26:46,335日志内容:内容添加失败:未将对象引用设置到对象的实例。
+-----------------------------------------
+
+时间:2019-03-12 13:41:57,747日志内容:内容添加失败:未将对象引用设置到对象的实例。
+-----------------------------------------
+
+时间:2019-03-12 13:44:41,751日志内容:内容添加失败:未将对象引用设置到对象的实例。
+-----------------------------------------
+
+时间:2019-03-12 13:56:04,409日志内容:内容状态修改失败:Attaching an entity of type 'Model.SysContent' failed because another entity of the same type already has the same primary key value. This can happen when using the 'Attach' method or setting the state of an entity to 'Unchanged' or 'Modified' if any entities in the graph have conflicting key values. This may be because some entities are new and have not yet received database-generated key values. In this case use the 'Add' method or the 'Added' entity state to track the graph and then set the state of non-new entities to 'Unchanged' or 'Modified' as appropriate.
+-----------------------------------------
+
+时间:2019-03-12 13:57:12,401日志内容:内容状态修改失败:Attaching an entity of type 'Model.SysContent' failed because another entity of the same type already has the same primary key value. This can happen when using the 'Attach' method or setting the state of an entity to 'Unchanged' or 'Modified' if any entities in the graph have conflicting key values. This may be because some entities are new and have not yet received database-generated key values. In this case use the 'Add' method or the 'Added' entity state to track the graph and then set the state of non-new entities to 'Unchanged' or 'Modified' as appropriate.
+-----------------------------------------
+
+时间:2019-03-12 13:57:31,923日志内容:内容状态修改失败:非静态字段需要一个目标。
+-----------------------------------------
+
+时间:2019-03-12 13:57:46,759日志内容:内容状态修改失败:未将对象引用设置到对象的实例。
+-----------------------------------------
+
+时间:2019-03-12 13:59:42,390日志内容:内容状态修改失败:未将对象引用设置到对象的实例。
+-----------------------------------------
+
+时间:2019-03-12 13:59:48,738日志内容:内容状态修改失败:未将对象引用设置到对象的实例。
+-----------------------------------------
+
+时间:2019-03-12 14:01:52,032日志内容:内容状态修改失败:未将对象引用设置到对象的实例。
+-----------------------------------------
+
+时间:2019-03-12 14:02:12,686日志内容:内容状态修改失败:未将对象引用设置到对象的实例。
+-----------------------------------------
+
+时间:2019-03-12 14:07:06,791日志内容:内容修改失败:Attaching an entity of type 'Model.SysContent' failed because another entity of the same type already has the same primary key value. This can happen when using the 'Attach' method or setting the state of an entity to 'Unchanged' or 'Modified' if any entities in the graph have conflicting key values. This may be because some entities are new and have not yet received database-generated key values. In this case use the 'Add' method or the 'Added' entity state to track the graph and then set the state of non-new entities to 'Unchanged' or 'Modified' as appropriate.
+-----------------------------------------
+
+时间:2019-03-12 14:08:03,056日志内容:内容修改失败:Attaching an entity of type 'Model.SysContent' failed because another entity of the same type already has the same primary key value. This can happen when using the 'Attach' method or setting the state of an entity to 'Unchanged' or 'Modified' if any entities in the graph have conflicting key values. This may be because some entities are new and have not yet received database-generated key values. In this case use the 'Add' method or the 'Added' entity state to track the graph and then set the state of non-new entities to 'Unchanged' or 'Modified' as appropriate.
+-----------------------------------------
+

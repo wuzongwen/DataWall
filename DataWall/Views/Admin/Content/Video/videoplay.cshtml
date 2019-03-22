@@ -1,0 +1,24 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<style>
+    #testBox {
+        width: 750px;
+        height: 450px;
+        margin: 0 auto;
+    }
+</style>
+<link rel="stylesheet" href="@Url.Content("~/Content/Video/fz-video.css")">
+<link rel="stylesheet" href="@Url.Content("~/Content/Video/iconfont.css")">
+<div id="testBox">
+</div>
+<script src="@Url.Content("~/Content/Video/fz-video.js")"></script>
+<script>
+    var FZ_VIDEO = new createVideo(
+        "testBox",	//容器的id
+        {
+            url: '@ViewBag.File', 	//视频地址
+            autoplay: true				//是否自动播放
+        }
+    );
+</script>

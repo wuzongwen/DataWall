@@ -1,0 +1,38 @@
+﻿@using Model
+@model Model.SysCustDevice
+@using Common
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="weadmin-body">
+    <form id="form1" class="layui-form">
+        @Html.HiddenFor(model => Model.ID)
+        <div class="layui-form-item">
+            <label class="layui-form-label">所属场馆</label>
+            <div class="layui-input-block" style="max-width:240px">
+                <select name="Library" id="Library" lay-verify="required" lay-filter="pid-select">
+                    @foreach (SysLibrary item in ViewData["datalist"] as List<SysLibrary>)
+                    {
+                        <option value="@item.ID" data-level="1">@item.LibraryName</option>
+                    }
+                </select>
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <label class="layui-form-label">设备名称</label>
+            <div class="layui-input-block">
+                <input type="text" name="CustDeviceName" lay-verify="required" value="@Model.CustDeviceName" jq-error="请输入设备名称" autocomplete="off" class="layui-input">
+            </div>
+        </div>
+
+        <div class="layui-form-item">
+            <div class="layui-input-block">
+                <button class="layui-btn" id="editTopic" lay-submit="" lay-filter="edit">立即提交</button>
+                <button type="reset" class="layui-btn layui-btn-primary layui-hide">重置</button>
+            </div>
+        </div>
+    </form>
+    <!-- 场馆ID -->
+    @Html.HiddenFor(model => Model.SysLibraryId, new { id = "LibraryId" })
+</div>
+<script src="@HtmlHelperExtend.GetCssJsUrl(Url.Content("~/Other/CustDevice/js"))" type="text/javascript" charset="utf-8"></script>

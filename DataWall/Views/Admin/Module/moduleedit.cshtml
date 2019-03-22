@@ -1,0 +1,150 @@
+﻿@using Common
+@using Model
+@model Model.SysProgramInfo
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="weadmin-body">
+    <form class="layui-form">
+        @Html.Action("Module1", "Module", new { id = ViewBag.LibraryId })
+        <div class="layui-form-item">
+            <div class="layui-input-block">
+                <button class="layui-btn" lay-submit="" lay-filter="submit">立即提交</button>
+            </div>
+        </div>
+    </form>
+</div>
+<script>
+    //一般直接写在一个js文件中
+    layui.use(['layer', 'form', 'jquery'], function () {
+        var layer = layui.layer,
+            $ = layui.jquery,
+            form = layui.form;
+
+        // 获得frame索引
+        //var index = parent.layer.getFrameIndex(window.name);
+        //iframe最大化
+        //parent.layer.full(index);
+
+
+        //自定义验证规则
+        form.verify({
+            mustcheck: function (value, item) { //复选框必选
+                var xname = $(item).attr("id")
+                var va = $(item).find("input[type='checkbox']:checked").val();
+                if (typeof (va) == "undefined") {
+                    return $(item).attr("lay-verify-msg");
+                }
+            }
+        });
+
+        form.on('checkbox(edit)', function (data) {
+            if (data.elem.checked) {
+                $("input[name='" + data.elem.name + "']").attr("disabled", "disabled");
+                $(this).removeAttr("disabled");
+            }
+            else {
+                $("input[name='" + data.elem.name + "']").removeAttr("disabled");
+            }
+            form.render('checkbox');
+
+            //console.log(data.elem); //得到checkbox原始DOM对象
+            //console.log(data.elem.checked); //是否被选中，true或者false
+            //console.log(data.value); //复选框value值，也可以通过data.elem.value得到
+            //console.log(data.othis); //得到美化后的DOM对象
+        });
+
+        //获取并提交设置
+        form.on('submit(submit)', function (data) {
+            var divArr = $('.layui-col-md4');
+            var ModuleArr = new Array(6);
+            var Time = new Array(6);
+            $.each(divArr, function (i, n) {
+                $.each($(n), function (j, item) {
+                    var d = $(item).find($("input:checkbox[type=checkbox]:checked"));
+                    var names = new Array(d.length);
+                    if (d.length > 0) {
+                        for (var p = 0; p < d.length; p++) {
+                            names[p] = $(d[p]).attr("name");
+                        }
+                    }
+                    else {
+                        layer.msg('请给模块' + (i + 1) + "选择内容");
+                        return false;
+                    }
+                    ModuleArr[i] = names;
+                    Time[i] = $(item).find($("input[type=text]")).val();
+                });
+            });
+
+            $.ajax({
+                type: 'post',
+                url: '/Module/EditModule',
+                dataType: 'json',
+                data: {
+                    Set: "{\"Module\":" + JSON.stringify(ModuleArr) + ",\"Time\":" + JSON.stringify(Time) + "}",
+                    Id: @(ViewBag.LibraryId),
+                },
+                beforeSend: function () {
+                    //加载层-风格4
+                    layer.load(1, {
+                        content: '数据提交中',
+                        shade: [0.4, '#393D49'],
+                        // time: 10 * 1000,
+                        success: function (layero) {
+                            layero.css('padding-left', '30px');
+                            layero.find('.layui-layer-content').css({
+                                'padding-top': '40px',
+                                'width': '70px',
+                                'background-position-x': '16px'
+                            });
+                        }
+                    });
+                },
+                complete: function () {
+                    layer.closeAll("loading");
+                },
+                error: function (XMLHttpRequest, status, thrownError) {
+                    layer.msg('网络繁忙，请稍后重试...');
+                    return false;
+                },
+                success: function (msg) {
+                    var code = msg.code;
+                    switch (code) {
+                        case '200':
+                            layer.alert(msg.msg, { icon: 6 }, function () {
+                                // 获得frame索引
+                                var index = parent.layer.getFrameIndex(window.name);
+                                //关闭当前frame
+                                parent.layer.close(index);
+                                //刷新父页面
+                                parent.location.reload();
+                            });
+                            break;
+                        case '201':
+                            layer.msg(msg.msg);
+                            break;
+                        case '202':
+                            layer.msg(msg.msg);
+                            break;
+                        case '401':
+                            layer.msg(msg.msg, {
+                                icon: 5,
+                                time: 1000
+                            });
+                            break;
+                        case '402':
+                            layer.alert(msg.msg, { icon: 5 }, function () {
+                                //跳转到登录页
+                                top.location.href = msg.url;
+                            });
+                            break;
+                    }
+                    return false;
+                }
+            });
+
+            return false;
+        });
+    });
+</script>

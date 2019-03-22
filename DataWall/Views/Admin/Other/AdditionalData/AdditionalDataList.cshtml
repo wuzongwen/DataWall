@@ -1,0 +1,125 @@
+﻿@using PagedList.Mvc;
+@model PagedList.IPagedList<Model.SysAdditionalData>
+@using Model
+@using Common
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<link rel="stylesheet" href="@Url.Content("~/Content/PagedList/css")">
+<div class="weadmin-nav">
+    <span class="layui-breadcrumb">
+        <a href="javascript:;">首页</a>
+        <a href="javascript:;">数据管理</a>
+        <a>
+            <cite>@ViewBag.Title</cite>
+        </a>
+    </span>
+    <a class="layui-btn layui-btn-sm" style="line-height:1.6em;margin-top:3px;float:right" href="javascript:location.replace(location.href);" title="刷新">
+        <i class="layui-icon" style="line-height:30px">&#xe669;</i>
+    </a>
+</div>
+<div class="weadmin-body">
+    <div class="layui-row">
+        <div class="layui-row">
+            @using (Html.BeginForm("AdditionalDataList", "Other", new { Type = ViewBag.Type }, FormMethod.Post, new { @class = "layui-form layui-col-md12 we-search", @id = "frmSearch" }))
+            {
+                <div class="layui-inline">
+                    场馆：
+                </div>
+                <div class="layui-input-inline" style="margin-top:-22px">
+                    <select name="library">
+                        <option value="0">全部</option>
+                        @foreach (SysLibrary lib in ViewData["datalist"] as List<SysLibrary>)
+                        {
+                            <option value="@lib.ID">@lib.LibraryName</option>
+                        }
+                    </select>
+                </div>
+                <input type="hidden" name="page" value="1" />
+                <button class="layui-btn" lay-submit="" lay-filter="sreach"><i class="layui-icon">&#xe615;</i></button>
+            }
+        </div>
+
+        <div class="weadmin-block">
+            <a href="javascript:;" class="layui-btn layui-btn-danger" onclick="delAll('@ViewBag.Type','@(Model.PageCount < Model.PageNumber ? 0 : Model.PageNumber)')"><i class="layui-icon"></i>批量删除</a>
+            <a href="javascript:;" class="layui-btn" id="UploadFile"><i class="layui-icon">&#xe67c;</i>导入数据</a>
+            <a href="@Url.Action("ExcelDownload","Other",new { Type = ViewBag.Type })" class="layui-btn layui-btn-danger" target="_blank"><i class="layui-icon">&#xe601;</i>下载示例文档</a>
+            <span class="fr" style="line-height:40px">共有数据：@ViewBag.DataCout 条</span>
+        </div>
+        <table class="layui-table">
+            <thead>
+                <tr>
+                    <th style="width:30px">
+                        <div class="layui-unselect header layui-form-checkbox" lay-skin="primary"><i class="layui-icon">&#xe605;</i></div>
+                    </th>
+                    @if (ViewBag.Type == 0)
+                    {
+                        <th>到馆人数</th>
+                    }
+                    else
+                    {
+                        <th>借阅人次</th>
+                        <th>借阅册次</th>
+                        <th>归还人次</th>
+                        <th>归还册次</th>
+                    }
+                    <th>数据时间</th>
+                    <th>所属场馆</th>
+                    <th>添加时间</th>
+                    <th>状态</th>
+                    <th>操作</th>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                <tr>
+                    <td>
+                        <div class="layui-unselect layui-form-checkbox" lay-skin="primary" data-id='@item.ID'><i class="layui-icon">&#xe605;</i></div>
+                    </td>
+                    <td>@item.PeopleNum</td>
+                    @if (ViewBag.Type == 1)
+                    {
+                        <td>@item.BookNum</td>
+                        <td>@item.StillPeopleNum</td>
+                        <td>@item.StillBookNum</td>
+                    }
+                    <td>@item.DataDatetime</td>
+                    @foreach (SysLibrary lib in ViewData["datalist"] as List<SysLibrary>)
+                    {
+                        if (item.SysLibraryId == lib.ID)
+                        {
+                            <td>@lib.LibraryName</td>
+                        }
+                    }
+                    <td>@item.CrateTime</td>
+                    <td class="td-status">
+                        <span class="layui-btn layui-btn-normal layui-btn-xs @Html.Encode(item.IsEnable == 0 ? " " : "layui-btn-disabled")">@Html.Encode(item.IsEnable == 0 ? "已启用" : "已停用")</span>
+                    </td>
+                    <td class="td-manage">
+                        <a onclick="member_stop(this,'@item.ID')" href="javascript:;" title="@Html.Encode(item.IsEnable == 0 ? "停用" : "启用")">
+                            <i class="layui-icon">@Html.Encode(item.IsEnable == 0 ? "✘" : "✔")</i>
+                        </a>
+                        <a title="编辑" onclick="WeAdminShow('编辑','@Url.Action("AdditionalDataEdit", "Other", new { id = item.ID })',460,@(item.Type == 0 ? "300" : "460"))" href="javascript:;">
+                        <i class="layui-icon">&#xe642;</i>
+                        </a>
+                        <a title="删除" onclick="member_del(this,'@item.ID','@ViewBag.Type','@(Model.PageCount < Model.PageNumber ? 0 : Model.PageNumber)')" href="javascript:;">
+                            <i class="layui-icon">&#xe640;</i>
+                        </a>
+                    </td>
+                </tr>
+                }
+            </tbody>
+        </table>
+        @if (Model.TotalItemCount > 10)
+        {
+            <div class="page">
+                <div>
+                    @Html.PagedListPager(Model, page => Url.Action("AdditionalDataList", new { page }))
+                </div>
+            </div>
+        }
+    </div>
+</div>
+<input type="hidden" id="libraryId" value="@ViewBag.library" />
+<input type="hidden" id="Type" value="@ViewBag.Type" />
+<script src="@HtmlHelperExtend.GetCssJsUrl(Url.Content("~/Other/AdditionalDataList/js"))" type="text/javascript" charset="utf-8"></script>
